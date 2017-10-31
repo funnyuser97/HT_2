@@ -7,7 +7,7 @@ def processing_str(my_str):
         count_other=0
         for i in my_str:
             if i.isdigit():
-                count_digit+=1
+                count_digit+=1 
             elif i.isalpha():
                 count_symb+=1
             else:
@@ -23,8 +23,15 @@ def processing_str(my_str):
                 new_str+=i
         print(sum_num,new_str)
     elif len_str>50:
-
-        print(len_str)
+        count_symb=0
+        new_str=''
+        for i in my_str:
+            if i.isdigit():
+                new_str+=i
+            elif i.isalpha():
+                count_symb+=1
+        print(count_symb,new_str)
+#in the way will output amount of character in string and will output string without characters
     else:
         print('did choose else')
     return;
