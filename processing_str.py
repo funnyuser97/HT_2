@@ -1,6 +1,7 @@
+#this function processinf input string
+#if lenght string is from 30 to 50, then  
 def processing_str(my_str):
     len_str=len(my_str)
-
     if len_str>=30 and len_str<=50:
         count_digit=0
         count_symb=0
@@ -12,7 +13,8 @@ def processing_str(my_str):
                 count_symb+=1
             else:
                 count_other+=1
-        print(len_str,count_digit,count_symb,count_other)
+        print('len =',len_str,'amount of numbers =',count_digit,
+            '\namount of symbols =',count_symb,'other =',count_other)
     elif len_str<30:
         sum_num=0
         new_str=''
@@ -21,7 +23,7 @@ def processing_str(my_str):
                 sum_num+=int(i)
             elif i.isalpha():
                 new_str+=i
-        print(sum_num,new_str)
+        print('sum all numbers:',sum_num,'\nstring without numbers',new_str)
     elif len_str>50:
         count_symb=0
         new_str=''
@@ -30,7 +32,7 @@ def processing_str(my_str):
                 new_str+=i
             elif i.isalpha():
                 count_symb+=1
-        print(count_symb,new_str)
+        print('amount of symbols',count_symb,'\nstring without symbols:',new_str)
 #in the way will output amount of character in string and will output string without characters
     else:
         print('did choose else')
