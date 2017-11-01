@@ -1,4 +1,5 @@
 #THIS IS FIRST TASK -SEASON
+print('THIS IS FIRST TASK -SEASON')
 #this function return season, that include input month
 #for example season(11)-return 'autumn' 
 def season0(x):
@@ -37,7 +38,7 @@ print('This is ',season1(month))
 print('This is ',season2(month))
 
 #THIS IS SECOND TASK - DEFAULT_PARAMETR
-
+print('\nHIS IS SECOND TASK - DEFAULT_PARAMETR')
 #the function adds a value in increments to the step
 #for example sumator(0,4,1)-return 10, because 0+1+2+3+4=10
 #default value this is parametr step. 
@@ -60,10 +61,10 @@ step=input('Enter step: ')
 if step.isdigit():
     print(sumator(start,finish,int(step)))
 else:
-print(sumator(start,finish))
+    print(sumator(start,finish))
 
 #THIS IS 3-TH TASK - FUNCTION, THAT INCUDE 3 FUNCTION
-
+print('\nTHIS IS 3-TH TASK - FUNCTION, THAT INCUDE 3 FUNCTION')
 from math import ceil
 #this function is main function in program
 def menu(a,b,c):
@@ -100,7 +101,7 @@ def task3(val):
 print('reasult=res+mult+sum =',menu(1,2,3))
 
 #THIS IS 4-TH TASK - FUNCTION, THAT COMPARE 2 NUMBERS
-
+print('\nTHIS IS 4-TH TASK - FUNCTION, THAT COMPARE 2 NUMBERS')
 def compare(x,y):
     if x>y:
         print('x biger than y on ',x-y)
@@ -115,7 +116,7 @@ y=int(input('input y:'))
 compare(x,y)
 
 #THIS IS 5-TH TASK - FUNCTION, THAT PROCESSING STRING
-
+print('\nTHIS IS 5-TH TASK - FUNCTION, THAT PROCESSING STRING')
 #this function processinf input string
 #if lenght string is from 30 to 50, then  
 def processing_str(my_str):
@@ -161,7 +162,7 @@ processing_str(my_string)
 
 
 #THIS IS 6-TH TASK - ANY 3 FUNCTION
-
+print('\nTHIS IS 6-TH TASK - ANY 3 FUNCTION')
 from math import exp,pi,log,ceil
 def menu(x):
     if x==1:     
@@ -175,9 +176,9 @@ def menu(x):
     return;
 
 def task1():
-    Pc=float(input('Input Pc(t): '))
-    t=float(input('Input t: '))
-    T=float(input('Input T: '))
+    Pc=float(input('Input Pc(t) (exp. 0.99) < 1: '))
+    t=float(input('Input t (exp. 160): '))
+    T=float(input('Input T (exp. 320): '))
     P1=exp(-t/T)
     P2=exp(-pi*t**2/(4*T**2))
     m1=log(1-Pc)/log(1-P1)-1
@@ -186,8 +187,8 @@ def task1():
     return;
 
 def task2():
-    y=float(input('Input lambda: '))
-    T1c=float(input('Input T1c: '))
+    y=float(input('Input lambda (exp. 0.0023): '))
+    T1c=float(input('Input T1c (exp. 213): '))
     suma=T1c*y
     m=find_num(suma,0,1)
     print('m = ',m) 
@@ -205,14 +206,14 @@ def find_num(suma,prev,m):
 
 
 def task3():
-    m=int(input('Input m: '))
-    t=float(input('Input t: ')) 
+    m=int(input('Input m (exp. 4): '))
+    t=float(input('Input t (exp. 123): ')) 
     y=[]
     p=[]
     p_tmp=[]
     f=[]
     for i in range(4):
-        print('Input lambda(',i,'):')
+        print('Input lambda(',i,') (exp. 0.0023):')
         y.append(float(input()))
         p_temp=exp(-y[i]*t)
         p.append(p_temp)
@@ -231,13 +232,13 @@ def task3():
     print ('Pc(t) = {0:8.6f} Fc(t) = {1:8.6f}'.format(Pc,Fc))
     print('lambda(c) {0:8.6f} T1c = {1:8.6f}'.format(yc,T1c))
     return;
-x=int(input('Please choose task (1-3):'))
-while x!=4: 
-    menu(x)
-    x=int(input('Please choose task (1-3):'))
+choose=int(input('Please choose task (1-3) or 4 for exit:'))
+while choose!=4: 
+    menu(choose)
+    choose=int(input('Please choose task (1-3) or 4 for exit:'))
 
 #THIS IS 7-TH TASK - CALCULATOR
-
+print('\nTHIS IS 7-TH TASK - CALCULATOR')
 def calculate(action,num1,num2):
     if action=='+':
         res=num1+num2
@@ -255,6 +256,4 @@ action=input('Input action: ')
 num1=float(input('Input first number: '))
 num2=float(input('Input second number: '))
 
-print(calculate(action,num1,num2))	
-
-
+print(calculate(action,num1,num2)) 
