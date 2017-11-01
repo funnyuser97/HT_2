@@ -1,5 +1,5 @@
 
-from math import exp,pi,log,ceil
+from math import ceil
 #this function is main function in program
 def menu(a,b,c):
     val=a*task1(a*2) + b*task2(b*2) + c*task3(c*2)  
