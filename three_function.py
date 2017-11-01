@@ -1,4 +1,9 @@
+#This program was created for the laboratory work 
+#on the discipline of reliability and security of computer systems
+
 from math import exp,pi,log,ceil
+#This function is main program
+#input 1-3 for execute task or 4 for exit
 def menu(x):
     if x==1:     
         task1()
@@ -9,7 +14,7 @@ def menu(x):
     else:     
         print('Incorrect choose!!!')
     return;
-
+#This function for calculats something values
 def task1():
     Pc=float(input('Input Pc(t): '))
     t=float(input('Input t: '))
@@ -28,15 +33,18 @@ def task2():
     m=find_num(suma,0,1)
     print('m = ',m) 
     return;
-
+#this function search the most near number to input
+#for example find_num(2,0,1)-return 3
+#because 2 the most near to 2.05 from list values
+#wich calculates with help some formula
 def find_num(suma,prev,m):
     tmp=0
     for i in range(m):
         tmp=tmp + (1/(i+1))
     if tmp>suma and (suma-prev)>(tmp-suma):
-        return tmp
+        return ceil(tmp)
     elif tmp>suma and (suma-prev)<(tmp-suma):
-        return prev
+        return ceil(prev)
     return find_num(suma,tmp,m+1);
 
 
